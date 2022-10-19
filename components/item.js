@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Item() {
+export default function Itemsito({ data }) {
   return (
     <div>
-      <h3>{item.name}</h3>
-      <p>{item.description}</p>
-      <span>{item.price}</span>
+      <h3>{data.name}</h3>
+      <span>{data.precio}</span>
+      <p>{data.descripcion}</p>
     </div>
   );
 }
