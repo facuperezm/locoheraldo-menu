@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Food from "../components/Food";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 import data from "../db/data";
@@ -29,6 +28,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header />
       <form>
         <button className="" onClick={handleChangeLang} value="en">
           EN

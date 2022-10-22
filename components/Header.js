@@ -4,29 +4,19 @@ import logo from "../public/logo.png";
 
 function Header() {
   return (
-    <div>
-      <header className="main__header">
-        <Image className="logo" src={logo} alt="loco heraldos logo" />
-        <h1>
-          EL LOCO <br />
-          <span className="heraldo">HERALDO</span>
-        </h1>
+    <div className="text-center flex align-center flex-col justify-center">
+      <header className="p-4 flex flex-col text-center justify-self-center">
+        <div className="mb-1 max-w-sm w-2/4 align-center m-auto">
+          <Image
+            className="logo"
+            src={logo}
+            alt="loco heraldos logo"
+            layout="responsive"
+          />
+        </div>
+        <h1 className="font-bold">EL LOCO HERALDO</h1>
         <h4>✨Un bar que ama el arte en todas sus dimensiones✨</h4>
-        <div className="languages">
-          <a className="hide">ES</a>
-          <a className="hide">EN</a>
-          <a className="hide">PT</a>
-        </div>
-        <div>
-          <a href="#" className="btn-food">
-            Bebidas
-          </a>
-          <a href="#" className="btn-beverage">
-            Comidas
-          </a>
-        </div>
       </header>
-      ;
     </div>
   );
 }
