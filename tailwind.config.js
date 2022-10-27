@@ -16,6 +16,10 @@ module.exports = {
       backgroundImage: {
         "back-image": "url('../public/images/background.jpg')",
       },
+      colors: {
+        greenLoco: "#554219",
+        borderLoco: "#dbb8b8",
+      },
     },
   },
   plugins: [],

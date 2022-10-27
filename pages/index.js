@@ -1,75 +1,113 @@
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
-import data from "../db/data";
 import { useState } from "react";
-import FoodContext from "../context/foodContext";
+import { useRouter } from "next/router";
+import es from "../locales/es";
+import en from "../locales/en";
+import Header from "../components/Header";
 import Itemsito from "../components/item";
+import ItemContainer from "../components/itemContainer";
 
 export default function Home() {
-  const { en, es } = data;
-  const [lang, setLang] = useState(es);
   const [show, setShow] = useState("comidas");
-  const [isHidden, setIsHidden] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
-  const handleShow = (e) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "es" ? es : en;
+
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    const path = locale + router.pathname;
+    router.replace(path, path, { locale });
+  };
+
+  const handleFood = (e) => {
     event.preventDefault();
     setShow(e.target.value);
   };
 
-  const handleChangeLang = (e) => {
-    event.preventDefault();
-    changeDefaultLang(e.target.value);
-    console.log(e.target.value);
-  };
-  const changeDefaultLang = (value) =>
-    value === "es" ? setLang(es) : setLang(en);
-
   return (
-    <div>
-      <Header />
-      <form>
-        <button className="" onClick={handleChangeLang} value="en">
-          EN
-        </button>
-        <button onClick={handleChangeLang} value="es">
-          ES
-        </button>
-        <button></button>
-      </form>
-
-      <form>
-        <button
-          className="rounded-full bg-cyan-200 py-1 px-3"
-          onClick={handleShow}
-          value="comidas"
+    <div className="flex-col justify-center m-auto items-center p-1">
+      <Header copy={t.header} />
+      <div className="flex flex-col justify-center m-auto items-center">
+        <select
+          onChange={changeLanguage}
+          defaultValue={locale}
+          className="text-black text-shadow-2xl text-lg bg-transparent text-center mb-4 border rounded-full p-1"
         >
-          Comidas
-        </button>
-        <button
-          className="rounded-full bg-cyan-200 py-1 px-3"
-          onClick={handleShow}
-          value="bebidas"
-        >
-          Bebidas
-        </button>
-      </form>
+          <option className="text-black" value="es">
+            ES
+          </option>
+          <option className="text-black" value="en">
+            EN
+          </option>
+        </select>
 
-      <h1 onClick={() => setIsHidden(!isHidden)}>Entradas</h1>
-      {isHidden
-        ? show === "comidas"
-          ? lang.comidas.entradas.map((item) => (
-              <div key={item.name}>
-                <Itemsito data={item} />
-              </div>
-            ))
-          : lang.bebidas.cocktails.map((item) => (
-              <div key={item.name}>
-                <Itemsito data={item} />
-              </div>
-            ))
-        : ""}
+        <form className="mb-4">
+          <button
+            className="rounded-full bg-greenLoco text-white py-1 px-3 mx-1"
+            onClick={() => setIsActive(!isActive)}
+            value="comidas"
+          >
+            {t.food}
+          </button>
+          <button
+            className="rounded-full bg-greenLoco text-white py-1 px-3 mx-1"
+            onClick={() => setIsActive(!isActive)}
+            value="bebidas"
+          >
+            {t.drinks}
+          </button>
+        </form>
+      </div>
+
+      <ItemContainer title={t.entradas}>
+        {t.comidas.entradas.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.picadas}>
+        {t.comidas.picadas.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.entrepanes}>
+        {t.comidas.entrepanes.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.alplato}>
+        {t.comidas.alplato.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.ensaladas}>
+        {t.comidas.ensaladas.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.delmar}>
+        {t.comidas.delmar.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.pizzas}>
+        {t.comidas.pizzas.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.adicionales}>
+        {t.comidas.adicionales.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.postres}>
+        {t.comidas.postres.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
     </div>
   );
 }

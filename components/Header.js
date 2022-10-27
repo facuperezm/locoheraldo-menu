@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 import logo from "../public/logo.png";
 
-function Header() {
+function Header({ copy }) {
   return (
     <div className="text-center flex align-center flex-col justify-center">
       <header className="p-4 flex flex-col text-center justify-self-center">
-        <div className="mb-1 max-w-sm w-2/4 align-center m-auto">
+        <div className="mb-1 max-w-sm w-2/4 align-center m-auto border-box">
           <Image
             className="logo"
             src={logo}
@@ -14,8 +14,10 @@ function Header() {
             layout="responsive"
           />
         </div>
-        <h1 className="font-bold">EL LOCO HERALDO</h1>
-        <h4>✨Un bar que ama el arte en todas sus dimensiones✨</h4>
+        <h1 className="mt-4 font-bold font-Passion text-[3.5rem] leading-10 tracking-[0.1rem]">
+          EL LOCO HERALDO
+        </h1>
+        <h4 className="mt-4 font-bold">{copy}</h4>
       </header>
     </div>
   );
