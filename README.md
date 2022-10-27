@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Loco Heraldo Website
 
-## Getting Started
+This is a freelance project developed for a local company.
 
-First, run the development server:
+**Link to project:**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![screenshot](./public/images/screenshot.jpeg)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tools I used for this project:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- ReactJS
+- Next.js
+- i18n Routing featured on [Next.js](https://nextjs.org/docs/advanced-features/i18n-routing)
+- TailwindCSS
+- Deployed on [Vercel](https://vercel.com/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Optimizations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- I want to add in a futured a database for updating the values as easy as possible. It could go from using a Google Sheets form, to a Firebase realtime database to make it easy.
+- Add small animations and transitions
 
-## Learn More
+## Continuous learning
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+It was required for this project that the website supports both english and spanish translation, so I took advantage of i18n features in NextJS to make changing languages fast and smooth. This also taught me more on how to shape the frontend design as I want with TailwindCSS which is a strong tool to use on any project.
