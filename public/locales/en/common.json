@@ -1,0 +1,289 @@
+{
+  "adicionales": "Additional",
+  "alplato": "to the plate",
+  "bebidas": {
+    "bebidasSinAlcohol": [
+      { "name": "SOFTNESS 350ML", "description": "", "price": "10000" },
+      {
+        "name": "WATER",
+        "description": "With or without gas",
+        "price": "10000"
+      },
+      { "name": "FLAVORED WATER", "description": "", "price": "10000" },
+      {
+        "name": "TROPICAL ORANGE JUICE",
+        "description": "Orange squeezed and passion fruit",
+        "price": "10000"
+      },
+      {
+        "name": "LEMONADE",
+        "description": "Lime, mint, ginger and sugar",
+        "price": "10000"
+      },
+      {
+        "name": "ORANGE JUICE",
+        "description": "Squeezed orange",
+        "price": "10000"
+      },
+      {
+        "name": "PINEAPPLE AND MINT",
+        "description": "Pineapple and mint smoothie",
+        "price ": "10000"
+      }
+    ],
+    "cervezasVinos": [
+      { "name": "HEINEKEN BEER", "description": "", "price": "10000" },
+      { "name": "GROLSCH BEER", "description": "", "price": "10000 " },
+      { "name": "IMPERIAL BEER", "description": "", "price": "10000" },
+      { "name": "PINT OF CRAFT BEER", "description": "", "price": "10000" },
+      { "name": "HALF PINT CRAFT BEER", "description": "", "price": "10000" },
+      { "name": "WINES", "description": "Consult", "price": "10000" },
+      { "name": "WHISKEY", "description": "Consult", "price": "10000" }
+    ],
+    "cocktails": [
+      {
+        "name": "DRY MARTINI",
+        "description": "London dry gin, dry vermouth and olive",
+        "price": "10000"
+      },
+      {
+        "name": "MARGARITA",
+        "description": "Tequila , triple sec, lime juice and salt",
+        "price": "10000"
+      },
+      {
+        "name": "TOM COLLINS",
+        "description": "Old Tom Gin, lime juice, classic syrup and cherry",
+        " price": "10000"
+      },
+      {
+        "name": "BLACK RUSSIAN",
+        "description": "Vodka and coffee liqueur",
+        "price": "10000"
+      },
+      {
+        "name": "FERNET",
+        "description ": "Fernet branca con Cola",
+        "price": "10000"
+      },
+      {
+        "name": "NEGRONI",
+        "description": "London Dry Gin, vermouth rosso and Campari",
+        "price": "10000"
+      },
+      {
+        "name": "ROB ROY",
+        "description": "Scotch whisky, vermouth rosso, angostura bitters and cherries",
+        "price": "10000"
+      },
+      {
+        "name": "GANCIA SHAKE",
+        "description": "Gancia, lime juice and sugar",
+        "price": "10000"
+      },
+      {
+        "name": "GIN TONIC",
+        "description": "London Dry Gin, tonic water and lime (citrus, botanicals and red berries )",
+        "price": "10000"
+      },
+      {
+        "name": "CAIPIRINHA",
+        "description": "Cachaça, lime and sugar",
+        "price": "10000"
+      },
+      {
+        "name": "CAIPIROSKA",
+        "description": "Vodka, lime and sugar",
+        "price": "1000 0"
+      },
+      {
+        "name": "MOJITO",
+        "description": "White rum, angostura bitters, lime, mint, soda and sugar",
+        "price": "10000"
+      },
+      {
+        "name": "APEROL SPRITZ ",
+        "description": "Aperol, prosecco and orange juice",
+        "price": "10000"
+      },
+      {
+        "name": "DAIQUIRI FROZEN",
+        "description": "White rum, choice of fruit and sugar",
+        "price": "10000"
+      },
+      {
+        "name": "CAMPARI ORANGE",
+        "description": "Campari and orange juice",
+        "price": "10000"
+      },
+      {
+        "name": "CUBA LIBRE",
+        "description": "Rum, cola and lime",
+        "price": "10000"
+      }
+    ]
+  },
+  "comidas": {
+    "adicionales": [
+      { "name": "GARLIC MAYONNAISE", "description": "", "price": "10000" },
+      { "name": "PROVENCAL SAUCE", "description": "", "price": " 10000" }
+    ],
+    "alplato": [
+      {
+        "name": "MILANESA OF VEAL WITH FRIES",
+        "description": "",
+        "price": "10000"
+      },
+      {
+        "name": "MILANESA OF VEAL ON HORSE WITH FRIES",
+        "description": " ",
+        "price": "10000"
+      },
+      {
+        "name": "NEAPOLITAN MILANESA WITH FRIES",
+        "description": "",
+        "price": "10000"
+      },
+      {
+        "name": "FISH OF THE DAY ",
+        "description": "Pacú or boga with grilled vegetables",
+        "price": "10000"
+      },
+      {
+        "name": "PICANHA",
+        "description": "Sliced picanha with salt and garlic slices, accompanied by cassava fried",
+        "price": "10000"
+      }
+    ],
+    "delmar": [
+      { "name": "BREADED RADIES", "description": "", "price": "10000" },
+      { "name": "BREADED SHRIMP", "description": "", "price": "10000 " }
+    ],
+    "ensaladas": [
+      {
+        "name": "MULTICOLOR",
+        "description": "Hojas verdes, tomate, cebolla, zanahoria, arvejas, cholo, huevo duro.",
+        "price": "10000"
+      },
+      {
+        "name": "VERDE",
+        "description": "Rúcula, lechuga, queso azul, tomates cherry",
+        "price": "10000"
+      },
+      {
+        "name": "CÉSAR",
+        "description": "Lechuga, pollo, crutones",
+        "price": "10000"
+      }
+    ],
+    "entradas": [
+      { "name": "FRENCH FRIES", "description": "", "price": "10000" },
+      {
+        "name": "FRENCH FRIES WITH CHEDDAR AND BACON",
+        "description": "",
+        "price ": "10000"
+      },
+      {
+        "name": "FRIED EMPANADAS DUO (MEAT OR JYQ)",
+        "description": "",
+        "price": "10000"
+      },
+      {
+        "name": "FRIED MANDIOC WITH PROVENCAL ",
+        "description": "",
+        "price": "10000"
+      }
+    ],
+    "entrepanes": [
+      {
+        "name": "SHAWARMA VEGGIE",
+        "description": "Arab bread, vegetables, garlic mayonnaise",
+        "price": "10000"
+      },
+      {
+        "name": "SHAWARMA WITH VEGETABLES, MEAT OR CHICKEN",
+        "description": "Arab bread, vegetables, garlic mayonnaise, meat or chicken",
+        "price": "10000"
+      },
+      {
+        "name": "SIMPLE BURGER",
+        "description": "Cheddar cheese, lettuce, tomato and mayonnaise",
+        "price": "10000"
+      },
+      {
+        "name": "BLUE BURGER",
+        "description": "Blue cheese, arugula and mayonnaise",
+        "price": "10000"
+      },
+      {
+        "name": " COMPLETE BURGER",
+        "description": "Cheddar cheese, egg, bacon, lettuce, tomato, onion and mayonnaise",
+        "price": "10000"
+      }
+    ],
+    "picadas": [
+      {
+        "name": "PICADA HERALDO",
+        "description": "Variety of cheeses and cold cuts, olives, fried cassava, pickled eggplant and bread",
+        "price": "10000"
+      },
+      {
+        "name": "PICADA SEA AND LAND",
+        "description": "Battered squid rings, breaded shrimp, hake sticks, salami, cheese, milanese, fried cassava and olives",
+        "price": "10000"
+      },
+      {
+        "name": "FRIED CHICKEN",
+        "description": "Chicken wings served with French fries",
+        "price": "10000"
+      }
+    ],
+    "pizzas": [
+      {
+        "name": "CLASSIC MUZZARELA",
+        "description": "Pizza sauce, mozzarella cheese",
+        "price": "10000"
+      },
+      {
+        "name": "ARUCULA",
+        "description": "Pizza sauce, cheese mozzarella, arugula",
+        "price": "10000"
+      },
+      {
+        "name": "BLUE CHEESE",
+        "description": "Pizza sauce, blue cheese, mozzarella cheese",
+        "price": "10000"
+      },
+      {
+        " name": "HAM AND PEPPER POINTS",
+        "description": "Pizza sauce, mozzarella cheese, ham and peppers",
+        "price": "10000"
+      },
+      {
+        "name": "MARGARITA",
+        "description": "Pizza sauce , mozzarella cheese, sliced tomato and basil",
+        "price": "10000"
+      },
+      {
+        "name": "HERALDO",
+        "description": "Pizza sauce, mozzarella cheese and shrimp",
+        "price": "10000"
+      }
+    ],
+    "postres": [
+      { "name": "SWISS CHOCOLATE", "description": "", "price": "10000" },
+      { "name": "ALMOND", "description": "", "price": "10000" },
+      { "name": "CRISPY", "description": "", "price": "10000" }
+    ]
+  },
+  "delmar": "From sea",
+  "drinks": "Beverages",
+  "ensaladas": "salads",
+  "entradas": "Tickets",
+  "entrepanes": "between breads",
+  "food": "Foods",
+  "header": "✨A bar that loves art in all its dimensions✨",
+  "picadas": "Chopped",
+  "pizzas": "pizza",
+  "postres": "Desserts"
+}

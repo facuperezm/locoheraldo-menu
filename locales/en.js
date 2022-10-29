@@ -10,6 +10,9 @@ export default {
   pizzas: "Pizzas",
   adicionales: "Aditionals",
   postres: "Desserts",
+  cocktails: "Cocktails",
+  bebidasSinAlcohol: "Soft drinks",
+  cervezasVinos: "Beers, wine and whiskey",
   header: "✨A bar that loves art in all its dimensions✨",
   comidas: {
     entradas: [
@@ -29,14 +32,14 @@ export default {
         price: "10000",
       },
       {
-        name: "MANDIOCA FRITA CON PROVENZAL",
+        name: "FRIED CASSAVA WITH PROVENZAL SAUCE",
         description: "",
         price: "10000",
       },
     ],
     picadas: [
       {
-        name: "PICADA HERALDO",
+        name: " HERALDO",
         description:
           "Variedad de quesos y fiambres, aceitunas, mandioca frita, berenjenas en escabeche y pan",
         price: "10000",

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { useRouter } from "next/router";
 import es from "../locales/es";
 import en from "../locales/en";
@@ -23,9 +23,10 @@ export default function Home() {
     router.replace(path, path, { locale });
   };
 
-  const handleFood = (e) => {
+  const handleFood = (event) => {
     event.preventDefault();
-    setShow(e.target.value);
+    console.log(event.target.value);
+    setShow(event.target.value)
   };
 
   return (
@@ -48,22 +49,40 @@ export default function Home() {
         <form className="mb-4">
           <button
             className="rounded-full bg-greenLoco text-white py-1 px-3 mx-1"
-            onClick={() => setIsActive(!isActive)}
+            onClick={handleFood}
             value="comidas"
           >
             {t.food}
           </button>
           <button
             className="rounded-full bg-greenLoco text-white py-1 px-3 mx-1"
-            onClick={() => setIsActive(!isActive)}
+            onClick={handleFood}
             value="bebidas"
           >
             {t.drinks}
           </button>
         </form>
       </div>
-
-      <ItemContainer title={t.entradas}>
+      {show === "bebidas" ? <div>
+      <ItemContainer title={t.cocktails}>
+        {t.bebidas.cocktails.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.bebidasSinAlcohol}>
+        {t.bebidas.bebidasSinAlcohol.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      <ItemContainer title={t.cervezasVinos}>
+        {t.bebidas.bebidasSinAlcohol.map((item) => (
+          <Itemsito key={item.name}>{item}</Itemsito>
+        ))}
+      </ItemContainer>
+      
+      </div> : 
+      <div>
+        <ItemContainer title={t.entradas}>
         {t.comidas.entradas.map((item) => (
           <Itemsito key={item.name}>{item}</Itemsito>
         ))}
@@ -108,6 +127,8 @@ export default function Home() {
           <Itemsito key={item.name}>{item}</Itemsito>
         ))}
       </ItemContainer>
+      </div>
+}
     </div>
   );
 }

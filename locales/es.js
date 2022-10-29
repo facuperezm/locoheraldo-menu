@@ -10,6 +10,9 @@ export default {
   pizzas: "Pizzas",
   adicionales: "Adicionales",
   postres: "Postres",
+  cocktails: "Cocktails",
+  bebidasSinAlcohol: "Bebidas sin alcohol",
+  cervezasVinos: "Cervezas, vinos y whisky",
   header: "✨Un bar que ama el arte en todas sus dimensiones✨",
   comidas: {
     entradas: [
