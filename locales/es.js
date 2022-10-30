@@ -140,7 +140,7 @@ export default {
       {
         name: "MULTICOLOR",
         description:
-          "Hojas verdes, tomate, cebolla, zanahoria, arvejas, cholo, huevo duro.",
+          "Hojas verdes, tomate, cebolla, zanahoria, arvejas, choclo, huevo duro.",
         price: "900",
       },
       {
