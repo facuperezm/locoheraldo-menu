@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../Footer";
 
 const Main = ({ children }) => {
   return (
@@ -8,6 +9,7 @@ const Main = ({ children }) => {
         <title>Loco Heraldo</title>
       </Head>
       <div>{children}</div>
+      <Footer />
     </div>
   );
 };
