@@ -26,7 +26,7 @@ export default function Home() {
   const handleFood = (event) => {
     event.preventDefault();
     console.log(event.target.value);
-    setShow(event.target.value)
+    setShow(event.target.value);
   };
 
   return (
@@ -63,72 +63,73 @@ export default function Home() {
           </button>
         </form>
       </div>
-      {show === "bebidas" ? <div>
-      <ItemContainer title={t.cocktails}>
-        {t.bebidas.cocktails.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.bebidasSinAlcohol}>
-        {t.bebidas.bebidasSinAlcohol.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.cervezasVinos}>
-        {t.bebidas.bebidasSinAlcohol.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      
-      </div> : 
-      <div>
-        <ItemContainer title={t.entradas}>
-        {t.comidas.entradas.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.picadas}>
-        {t.comidas.picadas.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.entrepanes}>
-        {t.comidas.entrepanes.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.alplato}>
-        {t.comidas.alplato.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.ensaladas}>
-        {t.comidas.ensaladas.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.delmar}>
-        {t.comidas.delmar.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.pizzas}>
-        {t.comidas.pizzas.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.adicionales}>
-        {t.comidas.adicionales.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      <ItemContainer title={t.postres}>
-        {t.comidas.postres.map((item) => (
-          <Itemsito key={item.name}>{item}</Itemsito>
-        ))}
-      </ItemContainer>
-      </div>
-}
+      {show === "bebidas" ? (
+        <div>
+          <ItemContainer title={t.cocktails}>
+            {t.bebidas.cocktails.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.bebidasSinAlcohol}>
+            {t.bebidas.bebidasSinAlcohol.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.cervezasVinos}>
+            {t.bebidas.bebidasSinAlcohol.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+        </div>
+      ) : (
+        <div>
+          <ItemContainer title={t.entradas}>
+            {t.comidas.entradas.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.picadas}>
+            {t.comidas.picadas.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.entrepanes}>
+            {t.comidas.entrepanes.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.alplato}>
+            {t.comidas.alplato.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.ensaladas}>
+            {t.comidas.ensaladas.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.delmar}>
+            {t.comidas.delmar.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.pizzas}>
+            {t.comidas.pizzas.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.adicionales}>
+            {t.comidas.adicionales.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+          <ItemContainer title={t.postres}>
+            {t.comidas.postres.map((item) => (
+              <Itemsito key={item.name}>{item}</Itemsito>
+            ))}
+          </ItemContainer>
+        </div>
+      )}
     </div>
   );
 }
