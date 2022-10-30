@@ -41,13 +41,13 @@ export default {
       {
         name: "HERALDO",
         description:
-          "Variedad de quesos and fiambres, aceitunas, mandioca frita, berenjenas en escabeche and pan",
+          "Variety of cheeses and cold cuts, olives, fried cassava, pickled eggplant and bread",
         price: "2400",
       },
       {
         name: "SEA AND LAND",
         description:
-          "Variety of cheeses and cold cuts, olives, fried cassava, pickled eggplant and bread",
+          "Breaded squid rings, breaded shrimp, hake sticks, salami, cheese, breaded beef, fried cassava, and olives",
         price: "2800",
       },
       {
@@ -64,7 +64,8 @@ export default {
       },
       {
         name: "VEGGIE SHAWARMA WITH BEEF OR CHICKEN",
-        description: "Arab bread, vegetables, garlic mayonnaise, meat or chicken",
+        description:
+          "Arab bread, vegetables, garlic mayonnaise, meat or chicken",
         price: "1200",
       },
       {
@@ -85,14 +86,12 @@ export default {
       },
       {
         name: "CHEESEBURGER",
-        description:
-          "Cheddar cheese",
+        description: "Cheddar cheese",
         price: "1000",
       },
       {
         name: "ADDITIONAL PATTY",
-        description:
-          "",
+        description: "",
         price: "200",
       },
     ],
@@ -121,7 +120,7 @@ export default {
       },
       {
         name: "NEAPOLITAN BREADED BEEF",
-        description: "BREADED BEEF WITH TOMATO SAUCE AND CHEESE",
+        description: "Breaded beef with tomato sauce and cheese",
         price: "1550",
       },
       {
@@ -131,8 +130,7 @@ export default {
       },
       {
         name: "PICANHA STEAK",
-        description:
-          "Picanha steak with garlic, served with cassava",
+        description: "Picanha steak with garlic, served with cassava",
         price: "2500",
       },
     ],
@@ -189,8 +187,7 @@ export default {
       },
       {
         name: "MARGHERITA",
-        description:
-          "Tomato sauce, mozzarella cheese, tomato slices and basil",
+        description: "Tomato sauce, mozzarella cheese, tomato slices and basil",
         price: "1000",
       },
       {
@@ -251,7 +248,8 @@ export default {
       },
       {
         name: "ROB ROY",
-        description: "Whisky escocés, red vermouth, bitter angostura and cherry",
+        description:
+          "Whisky escocés, red vermouth, bitter angostura and cherry",
         price: "800",
       },
       {
