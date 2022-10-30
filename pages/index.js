@@ -8,7 +8,6 @@ import en from "../locales/en";
 import Header from "../components/Header";
 import Itemsito from "../components/item";
 import ItemContainer from "../components/itemContainer";
-
 export default function Home() {
   const [show, setShow] = useState("comidas");
   const [isActive, setIsActive] = useState(false);
