@@ -7,7 +7,7 @@ export default function Itemsito({ children }) {
         <h3>{children.name}</h3>
         <span>${children.price}</span>
       </div>
-      <p className="capitalize">{children.description}</p>
+      <p className="normal-case">{children.description}</p>
     </div>
   );
 }
