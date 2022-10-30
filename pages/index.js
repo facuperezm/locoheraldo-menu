@@ -75,7 +75,7 @@ export default function Home() {
         ))}
       </ItemContainer>
       <ItemContainer title={t.cervezasVinos}>
-        {t.bebidas.bebidasSinAlcohol.map((item) => (
+        {t.bebidas.cervezasVinos.map((item) => (
           <Itemsito key={item.name}>{item}</Itemsito>
         ))}
       </ItemContainer>
