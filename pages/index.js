@@ -12,7 +12,6 @@ import api from "../product/api";
 
 export default function Home({ products }) {
   const [show, setShow] = useState("comidas");
-  const [isActive, setIsActive] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
@@ -26,9 +25,20 @@ export default function Home({ products }) {
 
   const handleFood = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
     setShow(event.target.value);
   };
+
+  const reduced = products.reduce((acc, product) => {
+    acc[product.category] = acc[product.category] || [];
+    acc[product.category].push(product);
+    return acc;
+  }, []);
+
+  const reducedArray = Object.entries(reduced);
+
+  const filteredArray = reducedArray.filter(([category, productList]) =>
+    productList.every((product) => product.maincategory === show)
+  );
 
   return (
     <div className="flex-col justify-center m-auto items-center p-1">
@@ -64,79 +74,12 @@ export default function Home({ products }) {
           </button>
         </form>
       </div>
-      {/* {show === "bebidas" ? (
-        <div>
-          <ItemContainer title={t.cocktails}>
-            {t.bebidas.cocktails.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.bebidasSinAlcohol}>
-            {t.bebidas.bebidasSinAlcohol.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.cervezasVinos}>
-            {t.bebidas.cervezasVinos.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-        </div>
-      ) : (
-        <div>
-          <ItemContainer title={t.entradas}>
-            {t.comidas.entradas.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.picadas}>
-            {t.comidas.picadas.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.entrepanes}>
-            {t.comidas.entrepanes.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.alplato}>
-            {t.comidas.alplato.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.ensaladas}>
-            {t.comidas.ensaladas.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.delmar}>
-            {t.comidas.delmar.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.pizzas}>
-            {t.comidas.pizzas.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.adicionales}>
-            {t.comidas.adicionales.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-          <ItemContainer title={t.postres}>
-            {t.comidas.postres.map((item) => (
-              <Itemsito key={item.name}>{item}</Itemsito>
-            ))}
-          </ItemContainer>
-        </div>
-      )} */}
-      {JSON.stringify(products)}
-      {products.map((product) => (
-        <div key={product.id} className="font-black">
-          <h1>{product.name}</h1>
-          <p>{product.description}</p>
-        </div>
+      {filteredArray.map(([category, productList]) => (
+        <ItemContainer key={category} title={category}>
+          {productList.map((product) => (
+            <Itemsito key={product.id}>{product}</Itemsito>
+          ))}
+        </ItemContainer>
       ))}
     </div>
   );
@@ -144,7 +87,6 @@ export default function Home({ products }) {
 
 export const getStaticProps = async () => {
   const products = await api.list();
-
   return {
     props: {
       products,

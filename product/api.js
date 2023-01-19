@@ -4,12 +4,9 @@ import Papa from "papaparse";
 module.exports = {
   list: async () => {
     return axios
-      .get(
-        `https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1Lsxf9ZxMr3gDSQrXyL4fKvhwvOZD0uxn3gJLwFc7OGjpbPuNdgZ6iD2g0Hs8EI0x60jpb81ib4dB/pub?output=csv`,
-        {
-          responseType: "",
-        }
-      )
+      .get(process.env.NEXT_PUBLIC_DB_SHEETS, {
+        responseType: "",
+      })
       .then((response) => {
         return new Promise((resolve, reject) => {
           Papa.parse(response.data, {
