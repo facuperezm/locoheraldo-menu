@@ -17,7 +17,7 @@ function Header({ copy }) {
         <h1 className="mt-4 font-bold font-Passion text-[3.5rem] leading-10 tracking-[0.1rem]">
           EL LOCO HERALDO
         </h1>
-        <h4 className="mt-4 font-bold">{copy}</h4>
+        <h2 className="mt-4 font-bold">{copy}</h2>
       </header>
     </div>
   );

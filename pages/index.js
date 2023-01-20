@@ -28,17 +28,16 @@ export default function Home({ products }) {
     setShow(event.target.value);
   };
 
-  const reduced = products.reduce((acc, product) => {
+  const filterByLanguage = products.filter((product) => {
+    return product.language === locale && product.maincategory === show;
+  });
+  const groupedByCategory = filterByLanguage.reduce((acc, product) => {
     acc[product.category] = acc[product.category] || [];
     acc[product.category].push(product);
     return acc;
   }, []);
 
-  const reducedArray = Object.entries(reduced);
-
-  const filteredArray = reducedArray.filter(([category, productList]) =>
-    productList.every((product) => product.maincategory === show)
-  );
+  const groupedArray = Object.entries(groupedByCategory);
 
   return (
     <div className="flex-col justify-center m-auto items-center p-1">
@@ -74,7 +73,7 @@ export default function Home({ products }) {
           </button>
         </form>
       </div>
-      {filteredArray.map(([category, productList]) => (
+      {groupedArray.map(([category, productList]) => (
         <ItemContainer key={category} title={category}>
           {productList.map((product) => (
             <Itemsito key={product.id}>{product}</Itemsito>
