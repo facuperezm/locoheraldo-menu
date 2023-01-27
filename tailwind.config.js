@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Passion: ["Passion One", ...defaultTheme.fontFamily.sans],
-        Roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-roboto)"],
+        serif: ["var(--font-passion)"],
       },
       backgroundImage: {
         "back-image": "url('../public/images/background.jpg')",

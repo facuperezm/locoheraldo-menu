@@ -4,7 +4,7 @@ export default function ItemContainer({ children, title }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div
-      className={`backdrop-blur-sm rounded-2xl border border-borderLoco my-2 mx-auto p-4 max-w-3xl transition-all duration-150 ease-out`}
+      className={`backdrop-blur-sm rounded-2xl border border-borderLoco my-2 mx-auto p-4 max-w-3xl transition-all duration-150 ease-out font-roboto`}
     >
       <h1
         onClick={() => setIsActive(!isActive)}

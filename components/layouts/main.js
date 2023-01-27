@@ -3,7 +3,7 @@ import Footer from "../Footer";
 
 const Main = ({ children }) => {
   return (
-    <div className="text-greenLoco bg-back-image bg-no-repeat bg-cover bg-center bg-fixed font-Roboto">
+    <div className="text-greenLoco bg-back-image bg-contain font-Roboto">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta

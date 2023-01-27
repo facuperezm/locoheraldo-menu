@@ -1,7 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import es from "../locales/es";
 import en from "../locales/en";
@@ -40,7 +37,7 @@ export default function Home({ products }) {
   const groupedArray = Object.entries(groupedByCategory);
 
   return (
-    <div className="flex-col justify-center m-auto items-center p-1">
+    <div className="flex-col justify-center m-auto items-center p-1 font-sans">
       <Header copy={t.header} />
       <div className="flex flex-col justify-center m-auto items-center">
         <select
